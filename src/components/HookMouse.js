@@ -10,6 +10,11 @@ function HookMouse() {
     }
     useEffect(() => {
         window.addEventListener('mousemove', logMousePosition)
+
+        return () => {
+            window.removeEventListener('mousemove', logMousePosition)/*sa ovom povratnom vrednoscu deaktiviramo komponentu
+            da nismo deaktivirali ona bi se i dalje pokretala i dolazilo bi do greske */
+        }
     }, [])//sa postavljenim praznim nizom okinuce se samo jednom, ali ce svaku vrednost prikaivat
     return (
         <div>
