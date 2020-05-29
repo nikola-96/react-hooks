@@ -9,7 +9,7 @@ function HookCounterTheree() {
                 onChange={e => setName({ ...name, firstName: e.target.value })}></input>{/*
                 ovde spredovanjem postizemo to da se prvo ime koje se otkucalo iskopira kao vrednost u 
                 samom objektu, a tek onda sledeca vrednost se opet ubacuje i tako svaki put.
-                da nema ovog ne bi mogli da dobijemo vrednost objekta!!!! */}
+                da nema ovog ne bi mogli da dobijemo vrednost objekta!!!!git  */}
             <input type="text"
                 value={name.lastname}
                 onChange={e => setName({ ...name, lastname: e.target.value })}></input>
