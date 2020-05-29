@@ -3,7 +3,8 @@ import './App.css';
 // import HookCounter from './components/HookCounter';
 import HookCounterTwo from './components/HookCounterTwo';
 import HookCounterTheree from './components/HookCounterTheree';
-import HookEffect from './components/HookEffect';
+import HookMouse from './components/HookMouse';
+// import HookEffect from './components/HookEffect';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <HookCounter /> */}
       {/* <HookCounterTwo />
       <HookCounterTheree /> */}
-      <HookEffect />
+      {/* <HookEffect /> */}
+      <HookMouse></HookMouse>
     </div>
   );
 }
