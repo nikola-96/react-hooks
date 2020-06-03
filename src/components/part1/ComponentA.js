@@ -7,7 +7,7 @@ function ComponentA() {
         <div>
             <button onClick={() => countContext.dispatchMethod('increment')}>Increment</button>
             <button onClick={() => countContext.dispatchMethod('decrement')}>Decrement</button>
-            <button onClick={() => countContext.dispatchMethod('reset')} >Reset</button>
+            <button onClick={() => countContext.dispatchMethodgit('reset')} >Reset</button>
         </div>
     )
 }
