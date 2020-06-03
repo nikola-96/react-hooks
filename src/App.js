@@ -1,27 +1,35 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
-import MouseContainer from './components/MouseContainer';
-import DataFetching from './components/DataFetching';
-import CounterTwo from './components/CounterTwo';
-// import HookCounter from './components/HookCounter';
-// import HookCounterTwo from './components/HookCounterTwo';
-// import HookCounterTheree from './components/HookCounterTheree';
-// import HookMouse from './components/HookMouse';
-// import HookEffect from './components/HookEffect';
+import ComponentA from './components/ComponentA'
+import ComponentB from './components/ComponentB'
+import ComponentC from './components/ComponentC'
+
+export const CountContext = React.createContext()
+
+const initalState = 0
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return initalState
+    default:
+      return state
+  }
+}
 
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initalState)
   return (
-    <div className="App">
-      {/* <HookCounter /> */}
-      {/* <HookCounterTwo />
-      <HookCounterTheree /> */}
-      {/* <HookEffect /> */}
-      {/* <HookMouse></HookMouse> */}
-      {/* <MouseContainer /> */}
-      {/* <DataFetching /> */}
-      <CounterTwo />
-    </div>
+    <CountContext.Provider value={{ countState: count, dispatchMethod: dispatch }}>
+      <div className="App">
+        <h1>{count}</h1>
+        <ComponentA />
+      </div>
+    </CountContext.Provider>
   );
 }
 
