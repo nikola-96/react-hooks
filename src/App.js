@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import MouseContainer from './components/MouseContainer';
 import DataFetching from './components/DataFetching';
-import CounterOne from './components/CounterOne';
+import CounterTwo from './components/CounterTwo';
 // import HookCounter from './components/HookCounter';
 // import HookCounterTwo from './components/HookCounterTwo';
 // import HookCounterTheree from './components/HookCounterTheree';
@@ -20,7 +20,7 @@ function App() {
       {/* <HookMouse></HookMouse> */}
       {/* <MouseContainer /> */}
       {/* <DataFetching /> */}
-      <CounterOne />
+      <CounterTwo />
     </div>
   );
 }
